@@ -1,4 +1,9 @@
 def assess_risk(clause_text):
+
+    # ✅ SAFETY FIX (THIS IS THE KEY LINE)
+    if isinstance(clause_text, list):
+        clause_text = " ".join(clause_text)
+
     text = clause_text.lower()
 
     rules = [
